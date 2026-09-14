@@ -19,21 +19,6 @@ const LoginPageContainer = styled.div`
     overflow: hidden;
 `;
 
-const HeartLineImage = styled.img`
-    position: absolute;
-
-    top: 80px;
-    right: 0px;
-    
-    width: 80%;
-    max-width: none;
-    height: auto;
-
-    pointer-events: none;
-    user-select: none;
-
-    z-index: 1;
-`;
 
 const LoginContent = styled.div`
     position: relative;
@@ -50,9 +35,9 @@ const LogoText = styled.div`
     font-family: serif;
     font-size: 48px;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
 
-    color: #3c3c3c;
+    color: #292828;
 `;
 
 const LoginBottom = styled.div`
@@ -130,7 +115,6 @@ const ErrorMessage = styled.div`
 
 export {
     LoginPageContainer,
-    HeartLineImage,
     LoginContent,
     LogoText,
     LoginBottom,
