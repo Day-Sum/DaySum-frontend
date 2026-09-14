@@ -1,8 +1,6 @@
 import * as S from './LoginPage.styles';
 import { KAKAO_LOGIN } from '../../constants/endPoint';
 
-import heartLine from '../../assets/login/heart-line.png';
-
 const LoginPage = () => {
     const BASE_URL =
         import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
@@ -16,10 +14,6 @@ const LoginPage = () => {
 
     return (
         <S.LoginPageContainer>
-            <S.HeartLineImage
-                src={heartLine}
-                alt=""
-            />
 
             <S.LoginContent>
                 <S.LogoText>𝑫𝒂𝒚𝑺𝒖𝒎</S.LogoText>

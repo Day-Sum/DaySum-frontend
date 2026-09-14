@@ -5,7 +5,9 @@ import ProtectedLayout from './layouts/ProtectedLayout';
 
 import HomePage from './pages/Home/HomePage';
 import LoginPage from './pages/Login/LoginPage';
+import CoupleInvitePage from './pages/Onboarding/CoupleInvitePage';
 import NicknamePage from './pages/Onboarding/NicknamePage';
+import RelationshipStartDatePage from './pages/Onboarding/RelationshipStartDatePage';
 
 import TokenProcessor from './utils/Authorization/TokenProcessor';
 
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
                     {
                         path: '/onboarding/nickname',
                         element: <NicknamePage />,
+                    },
+                    {
+                        path: '/onboarding/start-date',
+                        element: <RelationshipStartDatePage />,
+                    },
+                    {
+                        path: '/onboarding/invite',
+                        element: <CoupleInvitePage />,
                     },
                 ],
             },
