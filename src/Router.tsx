@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout/AppLayout';
 import ProtectedLayout from './layouts/ProtectedLayout';
 
+import DrawingPage from './pages/Drawing/DrawingPage';
 import HomePage from './pages/Home/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import CoupleInvitePage from './pages/Onboarding/CoupleInvitePage';
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                     {
                         path: '/home',
                         element: <HomePage />,
+                    },
+                    {
+                        path: '/drawing',
+                        element: <DrawingPage />,
                     },
                     {
                         path: '/onboarding/nickname',

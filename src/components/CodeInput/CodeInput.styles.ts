@@ -8,7 +8,7 @@ const Container = styled.div`
 
 const Input = styled.input`
     width: 100%;
-    height: 64px;
+    height: clamp(52px, 7.5dvh, 64px);
     padding: 0 64px 0 18px;
 
     border: 1px solid #dddddd;
@@ -40,8 +40,8 @@ const ActionButton = styled.button`
     align-items: center;
     justify-content: center;
 
-    width: 48px;
-    height: 48px;
+    width: clamp(42px, 6.3dvh, 48px);
+    height: clamp(42px, 6.3dvh, 48px);
     padding: 0;
 
     background: transparent;

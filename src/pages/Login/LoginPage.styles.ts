@@ -9,7 +9,9 @@ const LoginPageContainer = styled.div`
     flex-direction: column;
 
     width: 100%;
-    min-height: 100dvh;
+    height: 100%;
+    min-height: 0;
+    max-height: 100dvh;
 
     background-image: url(${paperBackground});
     background-size: cover;
@@ -28,7 +30,7 @@ const LoginContent = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin-top: 36vh;
+    margin-top: clamp(150px, 34dvh, 310px);
 `;
 
 const LogoText = styled.div`
@@ -51,7 +53,7 @@ const LoginBottom = styled.div`
     padding: 0 20px;
 
     margin-top: auto;
-    margin-bottom: 48px;
+    margin-bottom: max(24px, env(safe-area-inset-bottom));
 `;
 
 const KakaoLoginButton = styled.button`
@@ -61,7 +63,7 @@ const KakaoLoginButton = styled.button`
     gap: 14px;
 
     width: 100%;
-    height: 64px;
+    height: clamp(52px, 7.5dvh, 64px);
 
     border: none;
     border-radius: 10px;

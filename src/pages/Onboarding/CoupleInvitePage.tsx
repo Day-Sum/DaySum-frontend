@@ -17,6 +17,8 @@ import { queryClient } from '../../QueryClient';
 import * as S from './CoupleInvitePage.styles';
 
 const CONNECT_CODE_QUERY_KEY = ['couple-connect-code'];
+const COUPLE_STATUS_QUERY_KEY = ['couple-status'];
+const COUPLE_PROFILE_QUERY_KEY = ['couple-profile'];
 
 const CoupleInvitePage = () => {
     const navigate = useNavigate();
@@ -42,10 +44,20 @@ const CoupleInvitePage = () => {
     });
 
     const connectMutation = useApiMutation(connectCouple(), {
-        onSuccess: () => {
+        onSuccess: async () => {
             sessionStorage.removeItem(
                 'onboardingRelationshipStartedOn',
             );
+
+            await Promise.all([
+                queryClient.invalidateQueries({
+                    queryKey: COUPLE_STATUS_QUERY_KEY,
+                }),
+                queryClient.invalidateQueries({
+                    queryKey: COUPLE_PROFILE_QUERY_KEY,
+                }),
+            ]);
+
             navigate('/home', { replace: true });
         },
     });

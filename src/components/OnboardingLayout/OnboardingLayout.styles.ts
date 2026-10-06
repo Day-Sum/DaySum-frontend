@@ -9,7 +9,10 @@ const Container = styled.div`
     flex-direction: column;
 
     width: 100%;
-    min-height: 100dvh;
+    height: 100%;
+    min-height: 0;
+    max-height: 100dvh;
+    overflow: hidden;
 
     background-image: url(${paperBackground});
     background-position: center;
@@ -25,7 +28,8 @@ const Header = styled.header`
     justify-content: center;
 
     width: 100%;
-    height: 92px;
+    height: clamp(66px, 10dvh, 92px);
+    flex: 0 0 auto;
     padding: env(safe-area-inset-top) 20px 0;
 `;
 
@@ -126,9 +130,11 @@ const CloseIcon = styled.span`
 const Body = styled.div`
     display: flex;
     flex: 1;
+    min-height: 0;
     flex-direction: column;
 
     width: 100%;
+    overflow: hidden;
 `;
 
 export {
