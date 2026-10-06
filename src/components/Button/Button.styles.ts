@@ -4,7 +4,7 @@ import type { ButtonStylesProps } from './Button.types';
 
 const Button = styled.button<ButtonStylesProps>`
     width: ${({ width }) => width || '100%'};
-    height: 64px;
+    height: clamp(52px, 7.5dvh, 64px);
     padding: 0 24px;
 
     border: none;

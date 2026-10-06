@@ -6,6 +6,19 @@ interface ApiResponse<T> {
     data: T;
 }
 
+interface CoupleStatusResponse {
+    connected: boolean;
+    coupleId: number | null;
+}
+
+interface CoupleProfileResponse {
+    coupleId: number;
+    partnerUserId: number;
+    partnerNickname: string;
+    relationshipStartedOn: string;
+    dayCount: number;
+}
+
 interface ConnectCodeResponse {
     connectCode: string | null;
 }
@@ -24,6 +37,8 @@ interface ConnectCoupleResponse {
 
 export type {
     ApiResponse,
+    CoupleProfileResponse,
+    CoupleStatusResponse,
     ConnectCodeResponse,
     ConnectCoupleRequest,
     ConnectCoupleResponse,
